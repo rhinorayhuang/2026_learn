@@ -8,4 +8,4 @@ cartRouter.get("/", getCart);
 
 cartRouter.post("/item", idempotency(), upsertItem);
 cartRouter.delete("/item/:productId", idempotency(), removeItem);
-cartRouter.delete("/", idempotency(), clearCart);
+cartRouter.post("/", idempotency(), clearCart);
